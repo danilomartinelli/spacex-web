@@ -1,9 +1,18 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useEffect } from 'react'
 
 import GlobalStyles from 'styles/global'
 
 function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if (window && typeof window !== 'undefined') {
+      import('amplitude-js').then((amplitude) => {
+        amplitude.getInstance().init('6ff982068177ae7675fcb1e777dcdf0b')
+      })
+    }
+  }, [])
+
   return (
     <>
       <Head>

@@ -1,5 +1,7 @@
 import useSWR from 'swr'
 
+import { useRouter } from 'next/router'
+
 import { fetcher } from '../../lib/fetcher'
 
 import { useEffect, useState } from 'react'
@@ -10,8 +12,10 @@ import ReactLoading from 'react-loading'
 import * as S from './styles'
 
 import { LaunchResponse } from '../../../spacex-api'
+
 import Pagination from '../Pagination'
 import Card from '../Card'
+import { showImage } from '../../lib/abtest'
 
 type Option = {
   value: string
@@ -28,6 +32,8 @@ const options: Option[] = [
 export const LIMIT = 10
 
 const Main = () => {
+  const { push } = useRouter()
+
   const [filter, setFilter] = useState<Option | null>(options[0])
   const [offset, setOffset] = useState(0)
 
@@ -46,6 +52,19 @@ const Main = () => {
     setOffset(0)
   }, [filter])
 
+  useEffect(() => {
+    if (window && typeof window !== 'undefined') {
+      window.setTimeout(() => {
+        import('amplitude-js').then((amplitude) => {
+          amplitude.getInstance().logEvent('Home Page', {
+            name: showImage.name,
+            isAvailable: showImage.isAvailable()
+          })
+        })
+      }, 0)
+    }
+  }, [])
+
   return (
     <S.Wrapper>
       <S.FilterRow>
@@ -60,7 +79,11 @@ const Main = () => {
         <S.ResultWrapper>
           <S.List>
             {launches.data.map((launch) => (
-              <Card key={launch.id} launch={launch} />
+              <Card
+                key={launch.id}
+                launch={launch}
+                onClick={() => push(`/${launch.id}`)}
+              />
             ))}
           </S.List>
           <S.PaginationWrapper>

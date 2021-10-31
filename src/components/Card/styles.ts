@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isButton?: boolean }>`
   border: 1px solid #e9ecef;
   border-radius: 1rem;
   background: #ffffff;
   padding: 1.6rem 2.4rem;
   display: flex;
   flex-direction: column;
+  cursor: ${({ isButton }) => (isButton ? 'pointer' : 'default')};
 `
 
 export const Logo = styled.img`
