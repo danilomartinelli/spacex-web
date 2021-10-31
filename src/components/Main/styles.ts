@@ -17,3 +17,10 @@ export const LoadingWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `
+
+export const ResultWrapper = styled.div``
+
+export const PaginationWrapper = styled.div`
+  margin: 4rem auto 0 auto;
+  width: fit-content;
+`
