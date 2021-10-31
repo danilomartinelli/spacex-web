@@ -25,3 +25,7 @@ Para o teste AB foi utilizado o nookies para controle do cache no projeto e um n
 ## Hotjar
 
 Foi adicionado também o hotjar na aplicação, para encontrar possíveis pontos de problema e também os heatmaps.
+
+Com o hotjar também é possível gravar as telas, como exemplo:
+
+https://insights.hotjar.com/r?site=2678603&recording=8544231351&startTime=0&token=7bbc0d5d2bc649891bb528b8859a7045
