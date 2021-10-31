@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (window && typeof window !== 'undefined') {
-      hotjar.initialize(2678318, 6)
+      hotjar.initialize(2678603, 6)
       hotjar.identify(userUuid, { userProperty: 'value' })
 
       import('amplitude-js').then((amplitude) => {

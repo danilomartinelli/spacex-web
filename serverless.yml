@@ -1,2 +1,10 @@
 spacex-web:
   component: "@sls-next/serverless-component@3.5.2"
+  inputs:
+    name:
+      defaultLambda: 'spacex-app-lambda'
+      apiLambda: 'spacex-app-lambda'
+    bucketName: 'spacex-app'
+    description: '*lambda-type*@Edge for spacex-app'
+    cloudfront:
+        distributionId: E11YMSIM93WOO5
