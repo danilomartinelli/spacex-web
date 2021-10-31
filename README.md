@@ -1,69 +1,23 @@
-# Next Boilerplate
+# Tech Challenge
 
-## Preview
+## Tecnologias utilizas
 
-[Click Here](https://next-boilerplate.distrito.network/)
+- Nextjs
+- Styled Components
+- Amplitude
+- Hotjar
 
-## What is inside?
+## Descrição
 
-This project uses lot of stuff as:
+Foi criado uma API que consome os dados da SpaceX, esses dados são repassados para esse projeto web onde é exibido na Home os próximos lançamentos, últimos lançamentos, o último e o próximo. É possível acessar um lançamento e ir para a página do mesmo.
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
+## Teste AB
 
-## Getting Started
+Para o teste AB foi utilizado o nookies para controle do cache no projeto e um número randomico para randomiza os fluxos, no teste AB podemos acessar o card exibindo a Logo do lançamento ou não exibindo, foi criado um gráfico fúnil então para ver se o número de acessos a página do lançamento aumenta com a imagem:
 
-First, clone the repository:
 
-```bash
-git clone --depth=1 --single-branch --branch main https://github.com/danilomartinelli/next-boilerplate.git <project_name>
-```
+![Gráfico Funil](https://user-images.githubusercontent.com/28323438/139604127-6b4ba84a-2625-4efa-bd93-baf439cae8f4.png)
 
-Install dependencies:
+## Hotjar
 
-```bash
-cd <project_name>
-yarn
-```
-
-Then, run the development server:
-
-```bash
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Commands
-
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
-- `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## How To
-
-Changing the main remote repository's URL
-
-1. Open Terminal.
-2. Change the current working directory to your local project.
-3. ```bash git remote set-url origin https://github.com/USERNAME/REPOSITORY.git```
+Foi adicionado também o hotjar na aplicação, para encontrar possíveis pontos de problema e também os heatmaps.
