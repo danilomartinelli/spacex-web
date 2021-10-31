@@ -1,3 +1,5 @@
+import { FOOTER_HEIGHT } from '../Footer'
+import { HEADER_HEIGHT } from '../Header'
 import * as S from './styles'
 
 interface IProps {
@@ -9,7 +11,7 @@ interface IProps {
 const Template = ({ header, footer, children }: IProps) => (
   <S.Wrapper>
     {header}
-    {children}
+    <S.Main gap={HEADER_HEIGHT + FOOTER_HEIGHT}>{children}</S.Main>
     {footer}
   </S.Wrapper>
 )

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.footer`
+export const Wrapper = styled.header<{ height: number }>`
   background-color: #06092b;
   width: 100%;
-  padding: 3rem;
+  height: ${({ height }) => `${height}rem`};
   display: flex;
   align-items: center;
   justify-content: center;

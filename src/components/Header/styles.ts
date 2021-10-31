@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.header<{ height: number }>`
   background-color: #06092b;
   width: 100%;
-  padding: 3rem;
   display: flex;
+  height: ${({ height }) => `${height}rem`};
   align-items: center;
   justify-content: center;
 `

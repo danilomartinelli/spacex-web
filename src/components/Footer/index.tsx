@@ -4,8 +4,10 @@ interface IProps {
   text: string
 }
 
+export const FOOTER_HEIGHT = 9
+
 const Footer = ({ text }: IProps) => (
-  <S.Wrapper>
+  <S.Wrapper height={FOOTER_HEIGHT}>
     <S.Text>{text}</S.Text>
   </S.Wrapper>
 )

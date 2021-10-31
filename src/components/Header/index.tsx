@@ -4,8 +4,10 @@ interface IProps {
   title: string
 }
 
+export const HEADER_HEIGHT = 9
+
 const Header = ({ title }: IProps) => (
-  <S.Wrapper>
+  <S.Wrapper height={HEADER_HEIGHT}>
     <S.Title>{title}</S.Title>
   </S.Wrapper>
 )
