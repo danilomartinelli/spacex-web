@@ -28,3 +28,8 @@ export const Next = styled.img`
   width: 5rem;
   height: auto;
 `
+
+export const Label = styled.span`
+  color: #06092b;
+  font-size: 1.6rem;
+`

@@ -18,9 +18,18 @@ export const LoadingWrapper = styled.div`
   transform: translate(-50%, -50%);
 `
 
-export const ResultWrapper = styled.div``
+export const ResultWrapper = styled.div`
+  margin-top: 2rem;
+  padding: 0 2rem;
+`
 
 export const PaginationWrapper = styled.div`
-  margin: 4rem auto 0 auto;
+  margin: 4rem auto 4rem auto;
   width: fit-content;
+`
+
+export const List = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+  gap: 2rem 2rem;
 `
