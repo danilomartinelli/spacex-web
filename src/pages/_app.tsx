@@ -10,12 +10,10 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (window && typeof window !== 'undefined') {
-      window.setTimeout(() => {
-        import('react-hotjar').then(({ hotjar }) => {
-          hotjar.initialize(2678603, 6)
-          hotjar.identify(userUuid, { userProperty: 'value' })
-        })
-      }, 0)
+      import('react-hotjar').then(({ hotjar }) => {
+        hotjar.initialize(2678603, 6)
+        hotjar.identify(userUuid, { userProperty: 'value' })
+      })
 
       import('amplitude-js').then((amplitude) => {
         amplitude.getInstance().init('6ff982068177ae7675fcb1e777dcdf0b')
